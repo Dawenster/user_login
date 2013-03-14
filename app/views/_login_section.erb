@@ -1,0 +1,16 @@
+<div class="container">
+  <% if @error %>
+    <script>$(document).ready(function() {
+      alert("Wrong email or password!");
+    });
+    </script>
+    <% @error = false %>
+  <% end %>
+  <form action="/authenticate" method="get" name="login-section">
+    <ul>
+      <li>Email Address: <input type="text" name="email"></li>
+      <li>Password: <input type="password" name="password"></li>
+      <li><input type="submit" value="Login!"></li>
+    </ul>  
+  </form>
+</div>
